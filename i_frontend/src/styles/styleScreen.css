@@ -1,0 +1,24 @@
+.titleRegister {
+  top: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.titleSearch {
+  width: 100%;
+  height: 80px;
+  padding-left: 60px;
+  padding-top: 20px;
+
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
