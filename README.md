@@ -1,2 +1,2 @@
-# autocom
-Projeto de gestão e controle de marmorarias em javascript
+# autococ
+Projeto de gestão e controle para comerciante em javascript
