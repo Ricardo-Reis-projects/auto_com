@@ -1,2 +1,2 @@
 # autococ
-Projeto de gestão e controle para comerciante em javascript
+Management and control project for merchant in javascript
