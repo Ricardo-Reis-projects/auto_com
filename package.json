@@ -1,7 +1,6 @@
 {
   "name": "autocom",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start_front": "npm start --prefix i_frontend",
@@ -12,10 +11,21 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  
   "dependencies": {
     "concurrently": "^7.1.0",
     "dotenv": "^16.0.0",
     "express": "^4.18.1",
     "mongoose": "^6.3.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricardo-Reis-projects/java_script.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ricardo-Reis-projects/java_script/issues"
+  },
+  "homepage": "https://github.com/Ricardo-Reis-projects/java_script#readme",
+  "description": ""
 }

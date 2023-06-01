@@ -26,11 +26,26 @@ mongoose.connect('mongodb://localhost/db_autocom').then(db => {
 
 
 //importando API's
-const clientRoute = require('./ii_routes/clientRoute');
+const customerRoute = require('./ii_routes/customerRoute');
+const employeeRoute = require('./ii_routes/employeeRoute');
+const supplierRoute = require('./ii_routes/supplierRoute');
+const freightRoute = require('./ii_routes/freightRoute');
+const expenseRoute = require('./ii_routes/expenseRoute');
+const partnerRoute = require('./ii_routes/partnerRoute');
+const productRoute = require('./ii_routes/productRoute');
+const inventoryRoute = require('./ii_routes/inventoryRoute');
+const userRoute = require('./ii_routes/userRoute');
 
 //utilizando API's
-app.use('/apiclient', clientRoute);
-
+app.use('/apicustomer', customerRoute);  
+app.use('/apiemployee', employeeRoute);
+app.use('/apisupplier', supplierRoute);
+app.use('/apifreight', freightRoute);
+app.use('/apiexpense', expenseRoute);
+app.use('/apipartner', partnerRoute);
+app.use('/apiproduct', productRoute);
+app.use('/apiinventory', inventoryRoute);
+app.use('/apiuser', userRoute);
 
 //Comando só ira funcionar em produção para não haver necessidade de fazer build a toda nova atualização
 //__dirname - Diretório do projeto

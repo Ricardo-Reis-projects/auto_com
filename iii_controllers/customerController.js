@@ -1,9 +1,9 @@
-const Client = require('../iv_models/Client');
+const Customer = require('../iv_models/Customer');
 
-const addClient = async (req, res) => {
-    //let newClient = new Client(req.body)
+const addCustomer = async (req, res) => {
+    //let newCustomer = new Customer(req.body)
 
-    let newClient = new Client({
+    let newCustomer = new Customer({
         id: req.body.id,
         status: req.body.status,
         name: req.body.name,
@@ -16,7 +16,7 @@ const addClient = async (req, res) => {
         completion: req.body.completion,
         district: req.body.district,
         cep: req.body.cep,
-        county: req.body.county,
+        country: req.body.country,
         state: req.body.state,
 
         typeClient: req.body.radioTypeClient,        
@@ -33,10 +33,10 @@ const addClient = async (req, res) => {
         ie: req.body.ie
     })
     try {
-        let doc = await newClient.save()
-         res.redirect("/search/client")
+        let doc = await newCustomer.save()
+         res.redirect("/search/customer")
         
-        // res.redirect("/search/client")
+        // res.redirect("/search/customer")
         // res.send("Link adicionado com sucesso!!!");
         //console.log("Cliente adicionado com sucesso!");
  
@@ -45,24 +45,24 @@ const addClient = async (req, res) => {
     }
 }
 
-const allClients = async (req, res) => {
+const allCustomers = async (req, res) => {
 
     try {
-        let clients = await Client.find({});
+        let customers = await Customer.find({});
 
-        res.json(JSON.stringify(clients));
-        //res.send(clients);
-        //res.render('SearchScreen', { clients })
+        res.json(JSON.stringify(customers));
+        //res.send(customers);
+        //res.render('SearchScreen', { customers })
     } catch (error) {
         res.send(error);
     }
 }
 
-const selectClient = async (req, res) => {
+const selectCustomer = async (req, res) => {
 
-          let idClient = req.params.id;
+          let idCustomer = req.params.id;
         try {      
-            let doc = await Client.findOne({ _id: idClient })
+            let doc = await Customer.findOne({ _id: idCustomer })
             console.log(doc);
             res.send(doc);
             //res.redirect(doc.url);
@@ -80,7 +80,7 @@ c(req, res) => {
     let status = req.body.status;
     let name = req.body.name;
 
-    Client.newClient(id, status, name);
+    Customer.newCustomer(id, status, name);
 
     res.send("Aluno adicionado com sucesso! -----teste ricardo");
 }
@@ -91,7 +91,7 @@ const redirect = async (req, res) => {
 
     let title = req.params.title;
     try {
-        let doc = await Client.findOne({ title: title })
+        let doc = await Customer.findOne({ title: title })
         console.log(doc);
         res.redirect(doc.url);
     } catch (error) {
@@ -101,4 +101,4 @@ const redirect = async (req, res) => {
 */
 
 
-module.exports = { addClient, allClients, selectClient }
+module.exports = { addCustomer, allCustomers, selectCustomer }
